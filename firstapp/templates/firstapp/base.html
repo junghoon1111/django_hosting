@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내 홈페이지</title>
+
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'javascript/script.js' %}"></script>
+
+<!--
+    <script>
+        window.onload=function(){
+  $('body').append('<h1></h1>');
+
+
+  $(".one").on("mouseenter", function(){
+    $(".s_one").show();
+
+    $(".one").on("mouseleave", function(){
+        $(".slide").hide();
+      });
+  });
+
+
+  $(".two").on("mouseenter", function(){
+    $(".s_two").show();
+
+    $(".two").on("mouseleave", function(){
+        $(".slide").hide();
+      });
+  });
+
+
+  $(".three").on("mouseenter", function(){
+    $(".s_three").show();
+
+    $(".three").on("mouseleave", function(){
+        $(".slide").hide();
+      });
+  });
+
+
+}
+    </script>-->
+</head>
+<body>
+<header>
+    <h1>Junghoon Ma</h1>
+
+  </header>
+
+  <nav class="menuwrapper">
+    <ul class="clearfix menu">
+      <li class="first_li one">about me
+        <div class="slide hidden s_one">
+          <h3>항복이 들어가 부분</h3>
+          <p>목차</p>
+        </div>
+      </li>
+
+
+      <li class="first_li two">my images
+        <div class="slide hidden s_two">
+          <ul>
+            <li><a href="menu1.html">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+          </ul>
+        </div>
+      </li>
+
+
+      <li class="first_li three">contact
+        <div class="slide hidden s_three">
+          <h3>항복이 들어가 부분</h3>
+          <p>목차</p>
+        </div>
+      </li>
+
+      <li class="first_li forth">
+          <a href = "{% url  'post_list' %}"  style="color:black;">게시판</a>
+
+      </li>
+    </ul>
+
+  </nav>
+
+
+<!--
+<img src="{% static 'img/download.jpg' %}">-->
+{% block content %}
+{% endblock %}
+
+<footer>푸터입니다</footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'firstapp/base.html' %}
+{% load socialaccount %}
+{% block content %}
+
+로그인페이지
+{%if user.is_authenticated %}
+    {{user.username}}님이 로그인중
+    <a href="accounts/logout">로그아웃</a>
+{% else %}
+    <a href="accounts/signup">회원 가입</a>
+    <a href="{% provider_login_url 'google' %}">구글 로그인</a>
+{% endif %}
+
+
+
+
+{% endblock %}

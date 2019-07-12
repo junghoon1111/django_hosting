@@ -1,0 +1,21 @@
+{% extends 'firstapp/base.html' %}
+{% block content %}
+post list 입니다
+
+<a href="{% url 'login' %}">로그인 하기</a>
+
+{% for post in posts %}
+    <div style="border: solid 1px black;">
+        <h1>
+            <a href="{% url 'post_detail' pk=post.pk %}">
+                {{post.title}}
+            </a>
+            <p>published: {{ post.published_date|linebreaksbr}}</p>
+        </h1>
+
+    </div>
+
+{% endfor %}
+
+<h1><a href="{% url 'post_new' %}">새로운 글쓰기</a></h1>
+{% endblock %}

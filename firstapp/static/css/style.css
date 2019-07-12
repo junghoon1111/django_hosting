@@ -1,0 +1,42 @@
+/*h1{background-color: red;}*/
+.clearfix::after  {
+ content: "";
+ clear: both;
+ display: table;
+}
+
+.hidden{display:none;}
+
+a{
+color: black;
+}
+header{
+  background-color:black;
+  color:white;
+  font-size:40px;
+  height:70px;
+  text-align: center;
+  line-height:55px;
+  padding-top:10px;
+}
+
+nav{background-color:white;
+position:relative;}
+
+
+.first_li{
+  float:left;
+  width:100px;
+  border:2px solid black;
+  margin-right:30px;
+  margin-left:20px;
+  text-align:center;
+}
+
+
+.slide{
+  background-color:grey;
+  height:100px;
+  position:absolute;
+  width:100px;
+}

@@ -1,0 +1,8 @@
+{% extends 'firstapp/base.html' %}
+{% block content %}
+<h1>index 페이지 입니다.</h1>
+<a href = "{% url  'second_2' %}" >2번째 페이지로</a>
+<a href = "{% url  'second_3' %}" >3번째 페이지로</a>
+<a href = "{% url  'secondapp_1' %}" >2번째 앱으로</a>
+
+{% endblock %}

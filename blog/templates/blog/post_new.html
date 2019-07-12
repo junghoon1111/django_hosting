@@ -1,0 +1,9 @@
+{% extends 'firstapp/base.html' %}
+{% block content %}
+post new 입니다- 게시글을 작성하는 곳 입니다.
+
+<form method="POST">{% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
